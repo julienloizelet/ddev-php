@@ -21,7 +21,7 @@ distribution, this should be as simple as
     brew tap drud/ddev && brew install ddev
 
 
-### Prepare DDEV WordPress environment
+### Prepare DDEV environment
 
 The final structure of the project will look like below.
 
