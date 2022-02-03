@@ -99,7 +99,7 @@ ddev phpcbf ./my-own-modules/my-module/vendor/bin/phpcs my-own-modules/my-module
 
 First, install [PHPCS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer).
 
-The, you could run:
+Then, you could run:
 
 ```
 ddev phpcsfixer my-own-modules/my-module
