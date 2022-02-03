@@ -1,4 +1,4 @@
-name: php72
+name: php
 type: php
 docroot: ""
 php_version: "7.2"
