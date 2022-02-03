@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.2.0] - 2022-02-03
+
+### Added
+- Add config for PHP 7.2
+- Add command for coding standards : `phpcs`, `phpcbf`, `phpmd`
+
+
 ## [1.0.1] - 2021-12-16
 
 ### Added
