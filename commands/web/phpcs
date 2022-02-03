@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+## Description: Run PHPCS for some folder
+## Usage: phpcs bin_source folder
+## Example: "ddev phpcs ./my-own-modules/my-module/vendor/bin/phpcs my-own-modules/my-module --ignore="*/node_modules/*""
+
+
+PHPCS_SOURCE=${1:-./vendor/bin/phpcs}
+MODULE_SOURCE=${2:-my-own-modules/my-module}
+
+/usr/bin/php $PHPCS_SOURCE  $MODULE_SOURCE
