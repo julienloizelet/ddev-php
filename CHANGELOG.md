@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.3.0] - 2022-02-03
+
+### Added
+- Add command for coding standards : `phpcsfixer`
+
 ## [1.2.0] - 2022-02-03
 
 ### Added

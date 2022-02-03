@@ -46,7 +46,7 @@ php-project-sources
 └───my-own-modules (only if you want to test some of your module(s))
     │   
     │
-    └───yourVendorName-yourModuleName
+    └───my-module
        │   
        │ (Sources of a module)
          
@@ -78,6 +78,29 @@ This should take some times on the first launch as this will download all necess
 ## Usage
 
 ### Test your own module
+
+#### PHPCS
+
+```
+ddev phpcs ./my-own-modules/my-module/vendor/bin/phpcs my-own-modules/my-module
+```
+
+#### PHPCBF
+
+```
+ddev phpcbf ./my-own-modules/my-module/vendor/bin/phpcs my-own-modules/my-module
+```
+
+
+#### PHPCS FIXER
+
+First, install [PHPCS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer).
+
+The, you could run:
+
+```
+ddev phpcsfixer my-own-modules/my-module
+```
 
 ## License
 
