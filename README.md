@@ -12,6 +12,9 @@ The purpose of this repo is to share my PHP [DDEV-Local](https://ddev.readthedoc
   - [Prepare DDEV environment](#prepare-ddev-environment)
 - [Usage](#usage)
   - [Test your own module](#test-your-own-module)
+    - [PHPCS](#phpcs)
+    - [PHPCBF](#phpcbf)
+    - [PHPCS FIXER](#phpcs-fixer)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
