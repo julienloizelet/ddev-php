@@ -25,6 +25,7 @@ case $ACTION in
     ddev exec nginx -s reload
     rm nginx_full/nginx-site.conf
     mv nginx_full/nginx-site.conf.backup nginx_full/nginx-site.conf
+    echo "Done"
     ;;
   remove)
     ddev exec nginx -s reload

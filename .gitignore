@@ -27,3 +27,4 @@
 
 # Additional docker-compose file
 /docker-compose.crowdsec.yaml
+/docker-compose.playwright.yaml
