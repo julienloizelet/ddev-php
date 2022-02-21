@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.5.0] - 2022-02-21
+
+### Added
+- Add command to download MaxMind databases
+
 ## [1.4.0] - 2022-02-17
 
 ### Added
