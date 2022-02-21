@@ -5,10 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.6.0] - 2022-02-21
+
+### Changed
+- Add a default option to download self-hosted MaxMind databases.
+
+### Fixed
+- Fix name of the sha256 checksum file
+
 ## [1.5.0] - 2022-02-21
 
 ### Added
-- Add command to download MaxMind databases
+- Add command to download MaxMind databases: `maxmind-download`
 
 ## [1.4.0] - 2022-02-17
 
