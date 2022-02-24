@@ -52,13 +52,13 @@ $crowdSecStandaloneBouncerConfig = [
     'theme_custom_css' => '',
 
     'geolocation' => [
-        'save_in_session' => false,
+        'save_in_session' => true,
         'test_public_ip' => '210.249.74.42', // JP
         'enabled' => false,
         'type' => 'maxmind',
         'maxmind' => [
             'database_type' => 'country',
-            'database_path' => '/var/www/html/GeoLite2-Country.mmdb'
+            'database_path' => '/var/www/html/my-own-modules/crowdsec-php-lib/tests/GeoLite2-Country.mmdb'
         ]
     ]
 ];
