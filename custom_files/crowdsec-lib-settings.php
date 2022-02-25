@@ -9,7 +9,7 @@ $crowdSecStandaloneBouncerConfig = [
     'display_errors' => true, // [FILL ME] Set to true to stop the process and display errors if any
     'log_directory_path' => __DIR__.'/.logs', // [FILL ME] Important note: be sur this path won't be publicly accessible!
     'fs_cache_path' => __DIR__.'/.cache', // [FILL ME] Important note: be sur this path won't be publicly accessible!
-
+    'test_public_ip' => '',
     'bouncing_level' => Constants::BOUNCING_LEVEL_NORMAL,
 
     'stream_mode' => false,
@@ -53,7 +53,6 @@ $crowdSecStandaloneBouncerConfig = [
 
     'geolocation' => [
         'save_in_session' => true,
-        'test_public_ip' => '210.249.74.42', // JP
         'enabled' => false,
         'type' => 'maxmind',
         'maxmind' => [
