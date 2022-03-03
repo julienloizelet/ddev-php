@@ -8,9 +8,10 @@
 
 CURRENT_DIR=${PWD##*/}
 
-if [ $CURRENT_DIR != ".ddev" ];
+if [ "$CURRENT_DIR" != ".ddev" ];
 then
   echo "This script must be run in a .ddev directory"
+  echo "We are here: ${CURRENT_DIR}"
   exit 1
 fi
 
