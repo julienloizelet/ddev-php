@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.6.3] - 2022-03-16
+
+### Changed
+- Changes CrowdSec files to match with version of `crowdsec/bouncer` lib greater than 0.17.0
+
 ## [1.6.2] - 2022-02-25
 
 ### Changed
