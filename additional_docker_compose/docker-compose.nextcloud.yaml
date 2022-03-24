@@ -1,0 +1,22 @@
+version: '3.6'
+services:
+  nextcloud:
+    image: nextcloud
+    restart: always
+    container_name: ddev-${DDEV_SITENAME}-nextcloud
+    hostname: ${DDEV_SITENAME}-nextcloud
+    # These labels ensure this service is discoverable by ddev.
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    volumes:
+      - ../nextcloud:/var/www/html:rw
+      - ../my-own-modules:/etc/my-own-modules:rw
+    environment:
+      - VIRTUAL_HOST=$DDEV_HOSTNAME
+      - HTTP_EXPOSE=8888:8888
+      - MYSQL_PASSWORD=
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_HOST=db
+
