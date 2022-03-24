@@ -11,7 +11,6 @@ CURRENT_DIR=${PWD##*/}
 if [ "$CURRENT_DIR" != ".ddev" ];
 then
   echo "This script must be run in a .ddev directory"
-  echo "We are here: ${CURRENT_DIR}"
   exit 1
 fi
 
@@ -21,20 +20,23 @@ ACTION=${1:-add}
 
 case $ACTION in
   add)
-    mv nginx_full/nginx-site.conf nginx_full/nginx-site.conf.backup
-    cp custom_files/crowdsec-prepend-nginx-site.conf nginx_full/nginx-site.conf
+    ddev exec cp /etc/nginx/sites-enabled/nginx-site.conf /etc/nginx/sites-enabled/nginx-site.conf.backup
+    docker cp custom_files/crowdsec-prepend-nginx-site.conf ddev-"${DDEV_SITENAME}"-web://etc/nginx/sites-enabled/nginx-site.conf
+    ddev exec nginx -t
     ddev exec nginx -s reload
-    rm nginx_full/nginx-site.conf
-    mv nginx_full/nginx-site.conf.backup nginx_full/nginx-site.conf
-    echo "Done"
+    echo "Nginx config has been modified"
+    echo "To use the original conf, please run a ddev restart"
     ;;
   remove)
+    ddev exec cp /etc/nginx/sites-enabled/nginx-site.conf.backup /etc/nginx/sites-enabled/nginx-site.conf
+    ddev exec nginx -t
     ddev exec nginx -s reload
     ;;
   *)
     echo "Undefined action: ${ACTION}"
     ;;
 esac
+
 
 
 
