@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [2.0.0] - 2022-03-24
+
+### Added
+- Add `nextcloud` docker-compose yaml file to test on port 8888
+- Add some crowdsec testing scripts
+
+### Changed
+- Change DDEV compatibility to version 1.19.1
+- Change `nginx` and `find-ip` commands to work with 1.19.1
+
 ## [1.8.0] - 2022-03-17
 
 ### Added
