@@ -20,6 +20,9 @@ $crowdSecStandaloneBouncerConfig = [
 
     'clean_ip_cache_duration' => 1,
     'bad_ip_cache_duration' => 1,
+    'captcha_cache_duration'=> 86400,
+    'geolocation_cache_duration'=> 86400,
+
     'fallback_remediation' => Constants::REMEDIATION_CAPTCHA,
     'max_remediation_level' => Constants::REMEDIATION_BAN,
 
@@ -52,7 +55,7 @@ $crowdSecStandaloneBouncerConfig = [
     'theme_custom_css' => '',
 
     'geolocation' => [
-        'save_in_session' => true,
+        'save_result' => true,
         'enabled' => false,
         'type' => 'maxmind',
         'maxmind' => [
