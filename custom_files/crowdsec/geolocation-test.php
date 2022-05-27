@@ -11,6 +11,7 @@ if (isset($_GET['ip'])) {
     $dbName = $_GET['db-name'] ?? 'GeoLite2-Country.mmdb';
     $dbType = $_GET['db-type'] ?? 'country';
     $saveResult = isset($_GET['save-result']);
+    $fakeBrokenDb = isset($_GET['broken-db']);
 
     $geolocConfig = [
         'enabled' => true,
@@ -22,9 +23,14 @@ if (isset($_GET['ip'])) {
         ]
     ];
 
+    if($fakeBrokenDb){
+        $geolocConfig['maxmind']['database_path'] = '/var/www/html/my-own-modules/crowdsec-php-lib/tests/broken.mmdb';
+    }
+
     $bounce = new StandaloneBounce();
     /** @var $crowdSecStandaloneBouncerConfig */
-    $bouncer = $bounce->init($crowdSecStandaloneBouncerConfig);
+    $finalConfig = array_merge($crowdSecStandaloneBouncerConfig, ['geolocation' => $geolocConfig]);
+    $bouncer = $bounce->init($finalConfig);
     $apiCache = $bouncer->getApiCache();
 
     $geolocation = new Geolocation();
