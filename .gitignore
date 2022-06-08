@@ -29,3 +29,4 @@
 /docker-compose.crowdsec.yaml
 /docker-compose.playwright.yaml
 /docker-compose.nextcloud.yaml
+/docker-compose.php*.yaml

@@ -1,0 +1,31 @@
+version: '3.6'
+# @see https://github.com/drud/ddev-contrib/tree/master/docker-compose-services/old_php
+
+services:
+  php54:
+    container_name: ddev-${DDEV_SITENAME}-php54
+    image: devilbox/php-fpm:5.4-work
+
+    restart: "no"
+    ports:
+      - 9000
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
+    volumes:
+      - type: bind
+        source: ../
+        target: /var/www/html
+        consistency: cached
+      - ".:/mnt/ddev_config:ro"
+      - ddev-global-cache:/mnt/ddev-global-cache
+    environment:
+      - DDEV_PHP_VERSION
+      - IS_DDEV_PROJECT=true
+
+  web:
+    links:
+      - php54:php54
+    healthcheck:
+      # Use "true" as the healthcheck to ignore its result
+      test: ["CMD", "true"]
