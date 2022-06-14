@@ -1,6 +1,10 @@
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pull-requests: write
+
 name: Markdown files test and update
 jobs:
   markdown-test-and-update:
@@ -23,7 +27,7 @@ jobs:
         with:
           ruby-version: 2.6
 
-      - name: Check links in Mardown files
+      - name: Check links in Markdown files
         run: |
           gem install awesome_bot
           cd sources
@@ -35,3 +39,4 @@ jobs:
           COMMIT_NAME: Okaeli Dev Bot
           TARGET_PATHS: 'README.md'
           CHECK_ONLY_DEFAULT_BRANCH: true
+          CREATE_PR: true
