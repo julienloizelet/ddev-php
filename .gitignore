@@ -30,3 +30,7 @@
 /docker-compose.playwright.yaml
 /docker-compose.nextcloud.yaml
 /docker-compose.php*.yaml
+
+
+# Additional php.ini files
+/php/*.ini
