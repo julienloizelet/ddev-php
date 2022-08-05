@@ -8,7 +8,6 @@ BOUNCER_KEY=$(ddev create-bouncer | sed 's/\r$//')
 echo "Bouncer created"
 PROXY_IP=$(ddev find-ip ddev-router | sed 's/\r$//')
 ddev create-watcher
-ddev create-watcher
 ddev create-watcher PhpUnitTestMachine PhpUnitTestMachinePassword
 echo "Watchers created"
 SED_EXPRESSION_ONE=$(echo "'s/\x27api_key\x27 => \x27\(.*\)\x27/\x27api_key\x27 => \x27${BOUNCER_KEY}\x27/g'" "/var/www/html/my-own-modules/crowdsec-php-lib/scripts/auto-prepend/settings.php")
