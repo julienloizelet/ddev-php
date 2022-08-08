@@ -10,7 +10,8 @@ services:
       com.ddev.approot: $DDEV_APPROOT
     volumes:
       - ".:/mnt/ddev_config"
-      - ./custom_files/crowdsec/cfssl/tmp:/tmp/cfssl
+      - ./custom_files/crowdsec/cfssl:/tmp/cfssl
+      - ./custom_files/crowdsec/openssl:/tmp/openssl
       - ./custom_files/crowdsec/custom-config.yaml:/etc/crowdsec/config.yaml.local
     environment:
       - DISABLE_AGENT=true
