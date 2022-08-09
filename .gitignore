@@ -24,6 +24,7 @@
 /sequelpro.spf
 /**/README.*
 !/README.md
+*.backup
 
 # Additional docker-compose file
 /docker-compose.crowdsec.yaml

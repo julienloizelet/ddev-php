@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  crowdsec:
+    volumes:
+      - ./custom_files/crowdsec/cfssl:/tmp/cfssl
+      - ./custom_files/crowdsec/custom-config.yaml:/etc/crowdsec/config.yaml.local
+      - ./custom_files/crowdsec/custom-local-api-credentials.yaml:/etc/crowdsec/local_api_credentials.yaml.local
+  web:
+    volumes:
+      - ./custom_files/crowdsec/cfssl:/var/www/html/cfssl

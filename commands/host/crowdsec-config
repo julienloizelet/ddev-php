@@ -7,9 +7,10 @@
 BOUNCER_KEY=$(ddev create-bouncer | sed 's/\r$//')
 echo "Bouncer created"
 PROXY_IP=$(ddev find-ip ddev-router | sed 's/\r$//')
-ddev create-watcher
-ddev create-watcher PhpUnitTestMachine PhpUnitTestMachinePassword
-echo "Watchers created"
+# user/password authentication and TLS authentication are mutually exclusive
+# ddev create-watcher
+#ddev create-watcher PhpUnitTestMachine PhpUnitTestMachinePassword
+# echo "Watchers created"
 SED_EXPRESSION_ONE=$(echo "'s/\x27api_key\x27 => \x27\(.*\)\x27/\x27api_key\x27 => \x27${BOUNCER_KEY}\x27/g'" "/var/www/html/my-own-modules/crowdsec-php-lib/scripts/auto-prepend/settings.php")
 SED_EXPRESSION_TWO=$(echo "'s/\x27trust_ip_forward_array\x27 => \[\x27\(.*\)\x27\]/\x27trust_ip_forward_array\x27 => \[\x27${PROXY_IP}\x27\]/g'" "/var/www/html/my-own-modules/crowdsec-php-lib/scripts/auto-prepend/settings.php")
 echo "Now setting ${BOUNCER_KEY} as CrowdSec_Bouncer Api key"
