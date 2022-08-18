@@ -31,4 +31,9 @@
 /docker-compose.playwright.yaml
 /docker-compose.nextcloud.yaml
 /docker-compose.php*.yaml
+/docker-compose.portainer.yaml
+
+# Portainer
+/portainer-data/*
+
 
