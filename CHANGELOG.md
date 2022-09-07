@@ -5,7 +5,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [2.2.0] - 2022-09-07
-
+[Compare with previous release](https://github.com/julienloizelet/ddev-php/compare/v2.1.0...v2.2.0)
 ### Changed
 - Change DDEV compatibility by using `1.21.1` ddev version
 
@@ -14,7 +14,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Add `portainer` service docker-compose file
 - Add `crowdsec` TLS authorization configuration files
 
-[Compare with previous release](https://github.com/julienloizelet/ddev-php/compare/v2.1.0...v2.2.0)
 
 
 ## [2.1.0] - 2022-06-14
