@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2022-09-07
+
+### Changed
+- Change DDEV compatibility by using `1.21.1` ddev version
+
+### Added
+- Add `DDEV_EXPECTED_VERSION.txt` file with post-start hook to compare current and expected DDEV version
+- Add `portainer` service docker-compose file
+- Add `crowdsec` TLS authorization configuration files
+
 
 ## [2.1.0] - 2022-06-14
 

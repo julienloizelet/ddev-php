@@ -1,6 +1,8 @@
-# DDEV-Local stack for PHP project
+# DDEV stack for PHP project
 
-The purpose of this repo is to share my PHP [DDEV-Local](https://ddev.readthedocs.io/en/stable/) stack.
+[![Version](https://img.shields.io/github/v/release/julienloizelet/ddev-php?include_prereleases)](https://github.com/julienloizelet/ddev-php/releases)
+
+The purpose of this repo is to share my PHP [DDEV](https://ddev.readthedocs.io/en/stable/) stack.
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -21,20 +23,17 @@ The purpose of this repo is to share my PHP [DDEV-Local](https://ddev.readthedoc
 
 ## Quick start
 
-_We will suppose that you want to test on a WordPress 5.6.5 instance. Change the version number if you prefer another
-release._
-
-### DDEV-Local installation
+### DDEV installation
 
 
-This project is fully compatible with DDEV 1.18.2 and it is recommended to use this specific version.
+This project is fully compatible with DDEV 1.21.1, and it is recommended to use this specific version.
 For the DDEV installation, please follow the [official instructions](https://ddev.readthedocs.io/en/stable/#installation). 
 On a Linux distribution, you can run: 
 ```
 sudo apt-get -qq update
 sudo apt-get -qq -y install libnss3-tools
 curl -LO https://raw.githubusercontent.com/drud/ddev/master/scripts/install_ddev.sh
-bash install_ddev.sh v1.18.2
+bash install_ddev.sh v1.21.1
 rm install_ddev.sh
 ```
 
@@ -48,16 +47,8 @@ php-project-sources
 │ (your php project sources)    
 │
 └───.ddev
-│   │   
-│   │ (Cloned sources of this repo)
-│   
-└───my-own-modules (only if you want to test some of your module(s))
     │   
-    │
-    └───my-module
-       │   
-       │ (Sources of a module)
-         
+    │ (Cloned sources of this repo)
 ```
 
 - Create an empty folder that will contain all necessary sources:
@@ -81,34 +72,7 @@ cp .ddev/config_overrides/config.php74.yaml .ddev/config.php74.yaml
 cd .ddev && ddev start
 ```
 This should take some times on the first launch as this will download all necessary docker images.
-
-
-## Usage
-
-### Test your own module
-
-#### PHPCS
-
-```
-ddev phpcs ./my-own-modules/my-module/vendor/bin/phpcs my-own-modules/my-module
-```
-
-#### PHPCBF
-
-```
-ddev phpcbf ./my-own-modules/my-module/vendor/bin/phpcs my-own-modules/my-module
-```
-
-
-#### PHPCS FIXER
-
-First, install [PHPCS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer).
-
-Then, you could run:
-
-```
-ddev phpcsfixer my-own-modules/my-module
-```
+`
 
 ## License
 
