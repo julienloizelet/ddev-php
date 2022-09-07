@@ -10,13 +10,8 @@ The purpose of this repo is to share my PHP [DDEV](https://ddev.readthedocs.io/e
 **Table of Contents**
 
 - [Quick start](#quick-start)
-  - [DDEV-Local installation](#ddev-local-installation)
+  - [DDEV installation](#ddev-installation)
   - [Prepare DDEV environment](#prepare-ddev-environment)
-- [Usage](#usage)
-  - [Test your own module](#test-your-own-module)
-    - [PHPCS](#phpcs)
-    - [PHPCBF](#phpcbf)
-    - [PHPCS FIXER](#phpcs-fixer)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
