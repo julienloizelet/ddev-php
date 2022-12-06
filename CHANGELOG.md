@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+## [2.3.0] - 2022-12-06
+[Compare with previous release](https://github.com/julienloizelet/ddev-php/compare/v2.2.0...v2.3.0)
+### Changed
+- Change DDEV compatibility by using `1.21.3` ddev version
+- Disable online API for `crowdsec` container
+
+### Added
+- Add a `crowdsec-create-bouncer` config file
+
+---
+
 ## [2.2.0] - 2022-09-07
 [Compare with previous release](https://github.com/julienloizelet/ddev-php/compare/v2.1.0...v2.2.0)
 ### Changed

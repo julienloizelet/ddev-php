@@ -81,11 +81,11 @@ jobs:
           fi
 
       - name: Create Tag ${{ github.event.inputs.tag_name }}
-        uses: actions/github-script@v3
+        uses: actions/github-script@v6
         with:
           github-token: ${{ github.token }}
           script: |
-            github.git.createRef({
+            github.rest.git.createRef({
               owner: context.repo.owner,
               repo: context.repo.repo,
               ref: "refs/tags/${{ github.event.inputs.tag_name }}",
@@ -94,9 +94,9 @@ jobs:
 
       - name: Prepare release notes
         run: |
-          VERSION_RELEASE_NOTES=$(awk -v ver="[${{ env.VERSION_NUMBER }}]" '/^## / { if (p) { exit }; if ($2 == ver) { p=1; next} } p && NF' CHANGELOG.md)
+          # Retrieve release body and remove ---
+          VERSION_RELEASE_NOTES=$(awk -v ver="[${{ env.VERSION_NUMBER }}]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/tag/v${{ env.VERSION_NUMBER }})" '/^## / { if (p) { exit }; if ($2 == ver) { p=1; next} } p && NF' CHANGELOG.md | sed ':a;N;$!ba;s/\n---/ /g')
           echo "$VERSION_RELEASE_NOTES" >> CHANGELOG.txt
-
 
       - name: Create release ${{ env.VERSION_NUMBER }}
         uses: softprops/action-gh-release@v1
