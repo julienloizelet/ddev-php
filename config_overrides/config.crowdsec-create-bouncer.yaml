@@ -1,0 +1,3 @@
+hooks:
+  post-start:
+    - exec-host: ddev create-bouncer && echo "Bouncer created"

@@ -15,6 +15,7 @@ services:
       - ./custom_files/crowdsec/custom-local-api-credentials.yaml:/etc/crowdsec/local_api_credentials.yaml.local
     environment:
       - DISABLE_AGENT=true
+      - DISABLE_ONLINE_API=true
     ports:
       - "8080"
   web:
