@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [2.4.0](https://github.com/julienloizelet/ddev-php/releases/tag/v2.4.0)  - 2023-01-24
+[Compare with previous release](https://github.com/julienloizelet/ddev-php/compare/v2.3.0...v2.4.0)
+### Changed
+- Change DDEV compatibility by using `1.21.4` ddev version
+
+---
+
 ## [2.3.0](https://github.com/julienloizelet/ddev-php/releases/tag/v2.3.0)  - 2022-12-06
 [Compare with previous release](https://github.com/julienloizelet/ddev-php/compare/v2.2.0...v2.3.0)
 ### Changed
