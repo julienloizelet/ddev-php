@@ -20,5 +20,7 @@ services:
       - PORT=1358
     volumes:
       - ".:/mnt/ddev_config"
+    depends_on:
+      - redis
     healthcheck:
-      timeout: 2s
+      disable: true
