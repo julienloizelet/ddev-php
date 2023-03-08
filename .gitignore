@@ -25,6 +25,7 @@
 /**/README.*
 !/README.md
 *.backup
+/traefik
 
 # Additional docker-compose file
 /docker-compose.crowdsec.yaml
